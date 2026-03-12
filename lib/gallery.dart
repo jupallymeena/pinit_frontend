@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
-import 'package:pinitui/api_service.dart';
+import 'package:pinitui/apiservice.dart';
 import 'package:share_plus/share_plus.dart';
 
 class GalleryScreen extends StatefulWidget {
@@ -87,22 +87,6 @@ class _GalleryScreenState extends State<GalleryScreen> {
     }
   }
 
-  // // ---------------- SHOW INFO ----------------
-  // void showInfo(String createdAt) {
-  //   showDialog(
-  //     context: context,
-  //     builder: (_) => AlertDialog(
-  //       title: const Text("Image Info"),
-  //       content: Text("Uploaded on:\n$createdAt"),
-  //       actions: [
-  //         TextButton(
-  //           onPressed: () => Navigator.pop(context),
-  //           child: const Text("OK"),
-  //         ),
-  //       ],
-  //     ),
-  //   );
-  // }
   void showInfo(String createdAt, String deviceId, String deviceModel) {
     showDialog(
       context: context,
